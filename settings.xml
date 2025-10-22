@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>timi-timi-devops</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>timi-timi-devops</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>timi-timi-devops</id>
+        <url>https://timi-528757812890.d.codeartifact.eu-north-1.amazonaws.com/maven/timi-devops/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>timi-timi-devops</id>
+    <name>timi-timi-devops</name>
+    <url>https://timi-528757812890.d.codeartifact.eu-north-1.amazonaws.com/maven/timi-devops/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
